@@ -1,0 +1,9 @@
+{
+  "name": "analyser-frontend-tests",
+  "private": true,
+  "description": "Runs the analyser's browser code in a simulated browser (jsdom) against a live server. Used by tests/test_frontend.py.",
+  "type": "module",
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}

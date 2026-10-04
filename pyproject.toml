@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alex-booknlp-analyser"
+dynamic = ["version"]
+description = "aLex: explore books processed by BookNLP (entities, dialogue, corpus tools, narrative arcs, topics, networks) in your browser."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "networkx>=2.8",
+    "vaderSentiment",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "httpx"]       # httpx: FastAPI's test client
+
+[project.scripts]
+alex = "alex.app:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "alex.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["alex*"]
+
+[tool.setuptools.package-data]
+alex = ["static/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]          # the tests import their generated corpus (`fixture`) from this folder
+addopts = "-q"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::FutureWarning",
+]

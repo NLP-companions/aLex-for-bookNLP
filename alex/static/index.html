@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aLex - a BookNLP analysing tool</title>
+<script>window.WORKSPACE = null; /* the server writes the id of the open workspace here */</script>
+<script>try { var t = JSON.parse(localStorage.getItem("analyser.theme") || '"auto"'); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="stylesheet" href="/static/app.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="#/entities">aLex</a>
+  <nav id="tabs">
+    <a data-tab="books" href="#/books">Library</a>
+    <a data-tab="entities" href="#/entities">Entities</a>
+    <a data-tab="dialogue" href="#/dialogue">Dialogue</a>
+    <a data-tab="read" href="#/read">Read</a>
+    <a data-tab="corpus" href="#/corpus">Corpus</a>
+    <a data-tab="narrative" href="#/narrative">Arcs and style</a>
+    <a data-tab="topics" href="#/topics">Topics</a>
+    <a data-tab="compare" href="#/compare">Compare</a>
+    <a data-tab="network" href="#/network">Network</a>
+    <a data-tab="links" href="#/links">Entity Links</a>
+    <a data-tab="narrators" href="#/narrators">Narrators</a>
+  </nav>
+  <select id="wsSel" class="ws-sel" aria-label="Workspace" title="The workspace you are working in: its own books, links and settings"></select>
+  <button id="themeBtn" class="theme-btn"></button>
+  <button id="selBtn" class="sel-btn" aria-haspopup="dialog"></button>
+</header>
+<div id="selPop" class="pop" hidden></div>
+<div id="viewSlot"></div>
+<div id="pluralSlot" class="pagebar"></div>
+<main id="main"></main>
+<aside id="drawer" class="drawer" hidden>
+  <div class="drawer-head">
+    <div id="drawerTitle"></div>
+    <button class="icon" id="drawerClose" aria-label="Close">×</button>
+  </div>
+  <div id="drawerBody" class="drawer-body"></div>
+</aside>
+<div id="toast" class="toast" hidden></div>
+<script src="/static/js/core.js"></script>
+<script src="/static/js/entities.js"></script>
+<script src="/static/js/network.js"></script>
+<script src="/static/js/compare.js"></script>
+<script src="/static/js/links.js"></script>
+<script src="/static/js/books.js"></script>
+<script src="/static/js/workspaces.js"></script>
+<script src="/static/js/dialogue.js"></script>
+<script src="/static/js/corpus.js"></script>
+<script src="/static/js/narrative.js"></script>
+<script src="/static/js/reader.js"></script>
+<script src="/static/js/narrators.js"></script>
+<script src="/static/js/topics.js"></script>
+<script src="/static/js/topic-page.js"></script>
+<script src="/static/js/topic-compare.js"></script>
+<script src="/static/js/pagetools.js"></script>
+<script src="/static/js/main.js"></script>
+</body>
+</html>

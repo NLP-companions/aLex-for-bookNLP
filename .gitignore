@@ -1,0 +1,12 @@
+.DS_Store
+alex-data/
+__pycache__/
+.pytest_cache/
+node_modules/
+*.tmp
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+*.zip
