@@ -57,7 +57,7 @@ aLex only reads your books. Its own files (your book details, collections, links
 
 ## Companion editor
 
-aLex works with any BookNLP output. A separate companion editor (link to follow) can be used to clean and correct BookNLP's output before analysis; its dated export folders are read directly, and the newest export of each book is used.
+aLex works with any BookNLP output. A separate companion editor ([luna-editor-for-bookNLP](https://github.com/sapphophonic/luna-editor-for-bookNLP)) can be used to clean and correct BookNLP's output before analysis; its dated export folders are read directly, and the newest export of each book is used.
 
 ## Development
 
